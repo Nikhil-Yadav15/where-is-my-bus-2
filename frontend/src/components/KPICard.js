@@ -21,11 +21,11 @@ const KPICard = ({ title, value, icon: Icon, trend, trendValue, color = 'text-sl
   };
 
   return (
-    <Card className="p-6 bg-white border border-slate-200 hover:shadow-lg transition-all duration-200">
+    <Card className="p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-200">
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-slate-500 mb-1">{title}</p>
-          <p className={`text-2xl font-bold ${color} mb-2`}>
+          <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-1">{title}</p>
+          <p className={`text-2xl font-bold ${color} dark:text-white mb-2`}>
             {formatValue(value)}
           </p>
           {trend && trendValue && (
@@ -33,13 +33,13 @@ const KPICard = ({ title, value, icon: Icon, trend, trendValue, color = 'text-sl
               <span className={`text-sm font-medium ${getTrendColor(trend)}`}>
                 {trend === 'up' ? '↗' : trend === 'down' ? '↘' : '→'} {trendValue}
               </span>
-              <span className="text-xs text-slate-400">vs last month</span>
+              <span className="text-xs text-slate-400 dark:text-slate-500">vs last month</span>
             </div>
           )}
         </div>
         {Icon && (
-          <div className="p-3 bg-slate-50 rounded-lg">
-            <Icon className="w-6 h-6 text-slate-600" />
+          <div className="p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
+            <Icon className="w-6 h-6 text-slate-600 dark:text-slate-300" />
           </div>
         )}
       </div>
