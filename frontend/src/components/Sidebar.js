@@ -80,14 +80,14 @@ const Sidebar = () => {
         </ul>
       </nav>
       
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200">
+      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200 dark:border-slate-700">
         <div className="flex items-center space-x-3 px-4 py-2">
-          <div className="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">
-            <MapPin className="w-4 h-4 text-slate-600" />
+          <div className="w-8 h-8 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center">
+            <MapPin className="w-4 h-4 text-slate-600 dark:text-slate-300" />
           </div>
           <div>
-            <p className="text-sm font-medium text-slate-900">Transport Admin</p>
-            <p className="text-xs text-slate-500">System Manager</p>
+            <p className="text-sm font-medium text-slate-900 dark:text-white">Transport Admin</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">System Manager</p>
           </div>
         </div>
       </div>
