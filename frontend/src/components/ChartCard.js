@@ -82,9 +82,9 @@ const ChartCard = ({ title, data, type = 'bar', colors = ['#0f172a', '#475569', 
   };
 
   return (
-    <Card className="bg-white border border-slate-200">
-      <div className="p-6 border-b border-slate-200">
-        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+    <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+      <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{title}</h3>
       </div>
       <div className="p-6">
         {renderChart()}
