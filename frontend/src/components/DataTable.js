@@ -38,40 +38,40 @@ const DataTable = ({ title, data, columns, actions = false }) => {
   };
 
   return (
-    <Card className="bg-white border border-slate-200">
-      <div className="p-6 border-b border-slate-200">
-        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+    <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+      <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{title}</h3>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-slate-50">
+          <thead className="bg-slate-50 dark:bg-slate-700">
             <tr>
               {columns.map((column, index) => (
                 <th
                   key={index}
-                  className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider"
                 >
                   {column.header}
                 </th>
               ))}
               {actions && (
-                <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                   Actions
                 </th>
               )}
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-slate-200">
+          <tbody className="bg-white dark:bg-slate-800 divide-y divide-slate-200 dark:divide-slate-700">
             {data.map((row, rowIndex) => (
-              <tr key={rowIndex} className="hover:bg-slate-50 transition-colors duration-150">
+              <tr key={rowIndex} className="hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors duration-150">
                 {columns.map((column, colIndex) => (
-                  <td key={colIndex} className="px-6 py-4 whitespace-nowrap text-sm">
+                  <td key={colIndex} className="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-100">
                     {renderCellValue(row[column.accessor], column.type)}
                   </td>
                 ))}
                 {actions && (
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    <button className="text-slate-600 hover:text-slate-900 font-medium">
+                    <button className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 font-medium">
                       View Details
                     </button>
                   </td>
