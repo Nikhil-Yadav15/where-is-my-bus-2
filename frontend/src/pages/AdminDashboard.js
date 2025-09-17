@@ -153,20 +153,20 @@ const AdminDashboard = () => {
       </div>
 
       {/* Alerts & Notifications */}
-      <Card className="bg-white border border-slate-200">
-        <div className="p-6 border-b border-slate-200">
-          <h3 className="text-lg font-semibold text-slate-900">Active Alerts</h3>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Active Alerts</h3>
         </div>
         <div className="p-6 space-y-4">
           {data.alerts.map((alert) => (
             <div
               key={alert.id}
-              className={`p-4 rounded-lg border-l-4 ${getSeverityColor(alert.severity)}`}
+              className={`p-4 rounded-lg border-l-4 ${getSeverityColor(alert.severity)} dark:bg-opacity-20`}
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <p className="font-medium text-slate-900">{alert.message}</p>
-                  <p className="text-sm text-slate-500 mt-1">{alert.timestamp}</p>
+                  <p className="font-medium text-slate-900 dark:text-white">{alert.message}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{alert.timestamp}</p>
                 </div>
                 <Badge variant={alert.severity === 'high' ? 'destructive' : alert.severity === 'medium' ? 'outline' : 'secondary'}>
                   {alert.severity.toUpperCase()}
