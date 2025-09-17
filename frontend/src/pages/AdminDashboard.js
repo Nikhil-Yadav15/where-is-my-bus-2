@@ -91,19 +91,19 @@ const AdminDashboard = () => {
       </div>
 
       {/* Live Operations Map Placeholder */}
-      <Card className="bg-white border border-slate-200">
-        <div className="p-6 border-b border-slate-200">
-          <h3 className="text-lg font-semibold text-slate-900">Live Bus Locations</h3>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Live Bus Locations</h3>
         </div>
         <div className="p-6">
-          <div className="h-64 bg-slate-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300"></div>
+          <div className="h-64 bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-600 dark:to-slate-700"></div>
             <div className="relative z-10 text-center">
-              <div className="w-16 h-16 bg-slate-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-slate-400 dark:bg-slate-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Bus className="w-8 h-8 text-white" />
               </div>
-              <p className="text-slate-600 font-medium">Interactive Map Component</p>
-              <p className="text-sm text-slate-500 mt-1">
+              <p className="text-slate-600 dark:text-slate-300 font-medium">Interactive Map Component</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                 Showing {data.busLocations.length} active buses
               </p>
             </div>
