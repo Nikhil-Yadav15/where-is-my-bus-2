@@ -59,8 +59,8 @@ const StaffDashboard = () => {
   return (
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-slate-900">Drivers & Conductors Dashboard</h1>
-        <div className="text-sm text-slate-500">Last updated: {new Date().toLocaleTimeString()}</div>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Drivers & Conductors Dashboard</h1>
+        <div className="text-sm text-slate-500 dark:text-slate-400">Last updated: {new Date().toLocaleTimeString()}</div>
       </div>
 
       {/* KPI Cards */}
@@ -128,13 +128,13 @@ const StaffDashboard = () => {
 
       {/* Top Performers */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="bg-white border border-slate-200">
-          <div className="p-6 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Top Drivers</h3>
+        <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Top Drivers</h3>
           </div>
           <div className="p-6 space-y-4">
             {data.topPerformers.drivers.map((driver, index) => (
-              <div key={index} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+              <div key={index} className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
                 <div className="flex items-center space-x-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-white ${
                     index === 0 ? 'bg-yellow-500' : index === 1 ? 'bg-slate-400' : 'bg-amber-600'
@@ -142,8 +142,8 @@ const StaffDashboard = () => {
                     {index + 1}
                   </div>
                   <div>
-                    <p className="font-medium text-slate-900">{driver.name}</p>
-                    <p className="text-sm text-slate-500">{driver.trips} trips completed</p>
+                    <p className="font-medium text-slate-900 dark:text-white">{driver.name}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{driver.trips} trips completed</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -155,13 +155,13 @@ const StaffDashboard = () => {
           </div>
         </Card>
 
-        <Card className="bg-white border border-slate-200">
-          <div className="p-6 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Top Conductors</h3>
+        <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Top Conductors</h3>
           </div>
           <div className="p-6 space-y-4">
             {data.topPerformers.conductors.map((conductor, index) => (
-              <div key={index} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+              <div key={index} className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
                 <div className="flex items-center space-x-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-white ${
                     index === 0 ? 'bg-yellow-500' : index === 1 ? 'bg-slate-400' : 'bg-amber-600'
@@ -169,8 +169,8 @@ const StaffDashboard = () => {
                     {index + 1}
                   </div>
                   <div>
-                    <p className="font-medium text-slate-900">{conductor.name}</p>
-                    <p className="text-sm text-slate-500">{conductor.trips} trips completed</p>
+                    <p className="font-medium text-slate-900 dark:text-white">{conductor.name}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{conductor.trips} trips completed</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -185,14 +185,14 @@ const StaffDashboard = () => {
 
       {/* Recognition & Alerts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="bg-white border border-slate-200">
-          <div className="p-6 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Achievement Badges</h3>
+        <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Achievement Badges</h3>
           </div>
           <div className="p-6">
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
               {['🛡️', '🗺️', '❤️', '⏰', '⭐', '🏆', '🚌', '💪', '🎯', '⚡'].map((icon, index) => (
-                <div key={index} className="aspect-square bg-slate-100 rounded-lg flex items-center justify-center text-2xl hover:bg-slate-200 transition-colors cursor-pointer">
+                <div key={index} className="aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center text-2xl hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors cursor-pointer">
                   {icon}
                 </div>
               ))}
@@ -200,9 +200,9 @@ const StaffDashboard = () => {
           </div>
         </Card>
 
-        <Card className="bg-white border border-slate-200">
-          <div className="p-6 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Staff Alerts</h3>
+        <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Staff Alerts</h3>
           </div>
           <div className="p-6 space-y-3">
             {[
@@ -211,12 +211,12 @@ const StaffDashboard = () => {
               { type: 'Training Due', count: 5, severity: 'low' }
             ].map((alert, index) => (
               <div key={index} className={`p-3 rounded-lg border-l-4 ${
-                alert.severity === 'high' ? 'border-l-red-500 bg-red-50' :
-                alert.severity === 'medium' ? 'border-l-yellow-500 bg-yellow-50' :
-                'border-l-blue-500 bg-blue-50'
+                alert.severity === 'high' ? 'border-l-red-500 bg-red-50 dark:bg-red-900 dark:bg-opacity-20' :
+                alert.severity === 'medium' ? 'border-l-yellow-500 bg-yellow-50 dark:bg-yellow-900 dark:bg-opacity-20' :
+                'border-l-blue-500 bg-blue-50 dark:bg-blue-900 dark:bg-opacity-20'
               }`}>
                 <div className="flex items-center justify-between">
-                  <span className="font-medium text-slate-900">{alert.type}</span>
+                  <span className="font-medium text-slate-900 dark:text-white">{alert.type}</span>
                   <Badge variant={alert.severity === 'high' ? 'destructive' : alert.severity === 'medium' ? 'outline' : 'secondary'}>
                     {alert.count} staff
                   </Badge>

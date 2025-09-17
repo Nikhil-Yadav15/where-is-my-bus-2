@@ -49,8 +49,8 @@ const UsersDashboard = () => {
   return (
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-slate-900">Users Dashboard</h1>
-        <div className="text-sm text-slate-500">Last updated: {new Date().toLocaleTimeString()}</div>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Users Dashboard</h1>
+        <div className="text-sm text-slate-500 dark:text-slate-400">Last updated: {new Date().toLocaleTimeString()}</div>
       </div>
 
       {/* KPI Cards */}
@@ -105,14 +105,14 @@ const UsersDashboard = () => {
       </div>
 
       {/* Gamification Leaderboard */}
-      <Card className="bg-white border border-slate-200">
-        <div className="p-6 border-b border-slate-200">
-          <h3 className="text-lg font-semibold text-slate-900">Carbon Points Leaderboard</h3>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Carbon Points Leaderboard</h3>
         </div>
         <div className="p-6">
           <div className="space-y-4">
             {data.leaderboard.map((user) => (
-              <div key={user.rank} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+              <div key={user.rank} className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
                 <div className="flex items-center space-x-4">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-white ${
                     user.rank === 1 ? 'bg-yellow-500' : user.rank === 2 ? 'bg-slate-400' : user.rank === 3 ? 'bg-amber-600' : 'bg-slate-600'
@@ -120,8 +120,8 @@ const UsersDashboard = () => {
                     {user.rank}
                   </div>
                   <div>
-                    <p className="font-medium text-slate-900">{user.username}</p>
-                    <p className="text-sm text-slate-500">{user.badge}</p>
+                    <p className="font-medium text-slate-900 dark:text-white">{user.username}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">{user.badge}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -142,14 +142,14 @@ const UsersDashboard = () => {
           type="bar"
           colors={['#0f172a']}
         />
-        <Card className="bg-white border border-slate-200">
-          <div className="p-6 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Achievements Gallery</h3>
+        <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Achievements Gallery</h3>
           </div>
           <div className="p-6">
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
               {['🌱', '⭐', '🗺️', '🛡️', '⚔️', '🏆', '🚌', '💚', '🌍', '⚡'].map((icon, index) => (
-                <div key={index} className="aspect-square bg-slate-100 rounded-lg flex items-center justify-center text-2xl hover:bg-slate-200 transition-colors cursor-pointer">
+                <div key={index} className="aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center text-2xl hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors cursor-pointer">
                   {icon}
                 </div>
               ))}
@@ -167,9 +167,9 @@ const UsersDashboard = () => {
       />
 
       {/* User Notifications */}
-      <Card className="bg-white border border-slate-200">
-        <div className="p-6 border-b border-slate-200">
-          <h3 className="text-lg font-semibold text-slate-900">User Notifications</h3>
+      <Card className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">User Notifications</h3>
         </div>
         <div className="p-6">
           <div className="space-y-3">
@@ -178,10 +178,10 @@ const UsersDashboard = () => {
               { title: 'Route Update Notification', priority: 'Medium', status: 'Pending' },
               { title: 'Maintenance Alert', priority: 'Low', status: 'Scheduled' }
             ].map((notification, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+              <div key={index} className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">
                 <div>
-                  <p className="font-medium text-slate-900">{notification.title}</p>
-                  <p className="text-sm text-slate-500">Priority: {notification.priority}</p>
+                  <p className="font-medium text-slate-900 dark:text-white">{notification.title}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Priority: {notification.priority}</p>
                 </div>
                 <Badge variant={notification.status === 'Delivered' ? 'default' : notification.status === 'Pending' ? 'outline' : 'secondary'}>
                   {notification.status}
