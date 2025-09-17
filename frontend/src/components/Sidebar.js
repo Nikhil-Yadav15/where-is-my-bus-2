@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Settings, Users, Truck, BarChart3, MapPin } from 'lucide-react';
+import { Settings, Users, Truck, BarChart3, MapPin, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 const Sidebar = () => {
   const location = useLocation();
