@@ -33,13 +33,25 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-64 bg-white border-r border-slate-200 h-screen fixed left-0 top-0 overflow-y-auto">
-      <div className="p-6 border-b border-slate-200">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
-            <BarChart3 className="w-5 h-5 text-white" />
+    <div className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 h-screen fixed left-0 top-0 overflow-y-auto">
+      <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-slate-900 dark:bg-slate-100 rounded-lg flex items-center justify-center">
+              <BarChart3 className="w-5 h-5 text-white dark:text-slate-900" />
+            </div>
+            <span className="text-lg font-bold text-slate-900 dark:text-white">where-is-my-bus</span>
           </div>
-          <span className="text-xl font-bold text-slate-900">TransitHub</span>
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4 text-slate-400 hover:text-slate-600 dark:text-slate-300 dark:hover:text-slate-100" />
+            ) : (
+              <Moon className="w-4 h-4 text-slate-600 hover:text-slate-900" />
+            )}
+          </button>
         </div>
       </div>
       
