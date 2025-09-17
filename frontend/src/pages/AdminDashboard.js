@@ -50,8 +50,8 @@ const AdminDashboard = () => {
   return (
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-slate-900">Admin Dashboard</h1>
-        <div className="text-sm text-slate-500">Last updated: {new Date().toLocaleTimeString()}</div>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Admin Dashboard</h1>
+        <div className="text-sm text-slate-500 dark:text-slate-400">Last updated: {new Date().toLocaleTimeString()}</div>
       </div>
 
       {/* KPI Cards */}
