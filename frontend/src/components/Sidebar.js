@@ -5,6 +5,11 @@ import { useTheme } from 'next-themes';
 
 const Sidebar = () => {
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
+  
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
   
   const menuItems = [
     {
